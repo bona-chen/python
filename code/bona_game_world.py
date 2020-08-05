@@ -11,7 +11,7 @@ while True:
     if admit_start == "A":
         fault_start = 0
         answer = random.randint(1, 10)
-        times = 2
+        times = 3
         admit = input("""来猜猜Bona现在心里想的是什么数字吧（1-10）！
 ：""")
         while admit.isdigit() == 0:
@@ -45,7 +45,7 @@ while True:
                     while admit.isdigit() == 0:
                         admit = input("必须要输入阿拉伯数字哦:")
                     guess = int(admit)
-        if times == 0:
+        if times == 0 and guess != answer:
             print("啊，你已经把3次机会都用掉了，看来我们没缘啊！")
             print("正确答案是" + str(answer))
         print("游戏结束！")

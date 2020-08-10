@@ -15,8 +15,7 @@ while True:
         admit = input("""来猜猜Bona现在心里想的是什么数字吧（1-10）！
 ：""")
         while admit.isdigit() == 0:
-            admit = input("必须要输入阿拉伯数字哦:")
-            guess = int(admit)
+            admit = input("必须要输入阿拉伯数字哦\n:")
         guess = int(admit)
         while times != 0:
             if guess == answer:
@@ -25,7 +24,7 @@ while True:
                 break
             else:
                 times = times - 1
-                if times == 1:
+                if times == 2:
                     print("你还有两次机会！")
                     if guess > answer:
                         print("提示:\n你给的数字太大了！")
@@ -95,10 +94,10 @@ while True:
         medicine_s = 0
         medicine_m = 0
         medicine_b = 0
-        run = -1
-        while monster_hp > -1 and player_hp > 0:
-            while poison_time == 2:
-                poison = -1
+        run = 0
+        while monster_hp > 0 and player_hp > 0:
+            while poison_time == 3:
+                poison = 0
             if fault != 0:
                 print()
                 print("第", round, "回合")
@@ -106,7 +105,7 @@ while True:
             admit = input("""A.发起攻击  B.使用药品  C.使用技能  D.逃跑
 :""")
             if admit == "A":
-                fault = -1
+                fault = 0
                 print("【", name, "】", "发起攻击，造成12点伤害,能量值提升6点")
                 monster_hp -= 12
                 blue += 6
@@ -241,7 +240,7 @@ while True:
                             fault = 1
             if fault != 1:
                 round += 1
-                if sleeping == 0:
+                if sleeping == 1:
                     print("【小怪兽】HP：", monster_hp)
                     print("【", name, "】", "HP：", player_hp)
                     sleeping = 0

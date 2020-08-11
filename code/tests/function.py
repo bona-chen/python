@@ -54,6 +54,22 @@ def show_completed_models(models):
         print(model)
 
 
+def make_pizza(size, *toppings):
+    print("顾客要的大小：", str(size), "英寸")
+    print("顾客要加的配料：")
+    for topping in toppings:
+        print("-", topping)
+
+
+def user_profile(first_name, last_name, **info):
+    profile = {}
+    profile["first_name"] = first_name
+    profile["last_name"] = last_name
+    for key, value in info.items():
+        profile[key] = value
+    return profile
+
+
 people_welcome = ["aga", "jen", "sarah", "edward", "hurry", "phil", "erin"]
 hello("Bona")
 book("莫斯科绅士")
@@ -66,3 +82,5 @@ unprinted_models = ["手机壳", "机器人", "CPU"]
 completed_models = []
 print_models(unprinted_models, completed_models)
 show_completed_models(completed_models)
+make_pizza(14, "辣椒", "黑胡椒", "芝士")
+print(user_profile("Bona", "Chen", age=13, job="student"))

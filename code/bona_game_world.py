@@ -1,7 +1,4 @@
-from games import game
-from games import game_2
-import random
-print("                                                           Bona陈独家制作，严禁转载！")
+print("---Bona陈独家制作，严禁转载！---")
 print("欢迎来到Bona的游戏世界！")
 fault_start = 0
 while True:
@@ -11,10 +8,10 @@ while True:
 ：""")
     if admit_start == "A":
         fault_start = 0
-        game.guess_numbers()
+        from games import game
     elif admit_start == "B":
         fault_start = 0
-        game_2.legend()
+        from games import game_2
     elif admit_start == "C":
         print("客官慢走，有空就来玩啊！")
         break

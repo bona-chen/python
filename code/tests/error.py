@@ -1,22 +1,29 @@
 try:
-    print(5/0)
+    print(5 / 0)
 except ZeroDivisionError:
     print("你不能用0除任何一个数！")
-file_name = "alice.txt"
-try:
-    with open(file_name) as file:
-        print(file.read())
-except FileNotFoundError:
-    print("文件“" + file_name + "“不存在。")
+
+
+def count_words(file_name):
+    try:
+        with open(file_name, "r", encoding='UTF-8') as file:
+            contents = file.read()
+    except FileNotFoundError:
+        print("文件“" + file_name + "”不存在。")
+    else:
+        words = contents.split()
+        number_words = len(words)
+        print("文件“", file_name, "”有大约", number_words, "个词。")
+
+
+count_words("alice.txt")
 with open(r"D:\python\author_code\chapter_10\pi_million_digits.txt") as file_object:
-    print(file_object.readline())
     pi = file_object.read()
-    print(pi)
     birthday = input("请输入您的生日： ")
     if birthday in pi:
-        print("您的生日在圆周率后前100万小数中！")
+        print("您的生日在圆周率小数点后前100万小数中！")
     else:
-        print("您的生日不在圆周率后前100万小数中！")
+        print("您的生日不在圆周率小数点后前100万小数中！")
 with open("programming.txt", "w") as file_object:
     file_object.write("我喜欢编程。\n")
     file_object.write("我喜欢创造新游戏。\n")

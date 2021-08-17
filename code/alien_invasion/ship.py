@@ -1,7 +1,7 @@
 import pygame
 
 
-class Ship():
+class Ship:
 
     def __init__(self, ai_settings, screen):
         """初始化飞船并设置其初始位置"""
@@ -38,3 +38,7 @@ class Ship():
     def blitme(self):
         """在指定位置绘制飞船"""
         self.screen.blit(self.image, self.rect)
+
+    def center_ship(self):
+        """让飞船在屏幕上居中"""
+        self.center = self.screen_rect.centerx

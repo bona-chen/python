@@ -100,3 +100,9 @@ elif year % 100 == 0 and year % 400 == 0:
     print(year, "年是世纪闰年！")
 else:
     print(year, "年不是闰年！")
+
+"""第二十一讲"""
+A = [0, 0, 0]
+for i in range(3):
+    A[i] = [0] * 3
+print(A)

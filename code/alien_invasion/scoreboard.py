@@ -7,8 +7,9 @@ from ship import Ship
 class Scoreboard:
     """显示得分信息的类"""
 
-    def __init__(self, ai_settings, screen, stats):
+    def __init__(self, ai_settings, screen, stats, ship):
         """初始化显示得分涉及的属性"""
+        self.ship = ship
         self.screen = screen
         self.screen_rect = screen.get_rect()
         self.ai_settings = ai_settings

@@ -3,9 +3,10 @@ import pygame
 from time import sleep
 from bullet import Bullet
 from alien import Alien
+import json
 
 
-def check_keydown_events(event, ai_settings, screen, ship, bullets):
+def check_keydown_events(event, ai_settings, screen, stats, ship, bullets):
     """响应松开"""
     if event.key == pygame.K_RIGHT:
         ship.moving_right = True
@@ -14,6 +15,8 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
     elif event.key == pygame.K_SPACE:
         fire_bullet(ai_settings, screen, ship, bullets)
     elif event.key == pygame.K_q:
+        with open("high_score", "w") as file:
+            json.dump(stats.high_score, file)
         sys.exit()
 
 
@@ -59,7 +62,7 @@ def check_events(ai_settings, screen, stats, sb, play_button, ship, aliens, bull
         if event.type == pygame.QUIT:
             sys.exit()
         elif event.type == pygame.KEYDOWN:
-            check_keydown_events(event, ai_settings, screen, ship, bullets)
+            check_keydown_events(event, ai_settings, screen, stats, ship, bullets)
         elif event.type == pygame.KEYUP:
             check_keyup_events(event, ship)
         elif event.type == pygame.MOUSEBUTTONDOWN:
@@ -163,7 +166,7 @@ def change_fleet_direction(ai_settings, aliens):
 
 
 def check_fleet_edges(ai_settings, aliens):
-    """有外星人到达边缘是采取相应的措施"""
+    """有外星人到达边缘时采取相应的措施"""
     for alien in aliens.sprites():
         if alien.check_edge():
             change_fleet_direction(ai_settings, aliens)

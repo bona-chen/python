@@ -19,14 +19,14 @@ def run_game():
     # 创建开始游戏按钮
     play_button = Button(ai_settings, screen, "Play")
 
-    # 创建一个用于存储游戏统计信息的实例, 并创建记分牌
-    stats = GameStats(ai_settings)
-    sb = Scoreboard(ai_settings, screen, stats)
-
     # 创建一艘飞船、一个子弹编组、一个外星人编组
     ship = Ship(ai_settings, screen)
     bullets = Group()
     aliens = Group()
+
+    # 创建一个用于存储游戏统计信息的实例, 并创建记分牌
+    stats = GameStats(ai_settings)
+    sb = Scoreboard(ai_settings, screen, stats, ship)
 
     # 创建外星人群
     gf.create_fleet(ai_settings, screen, ship, aliens)

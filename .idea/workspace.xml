@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="09f823da-0bed-4c13-a52f-c4a17b944178" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/code/alien_invasion/high_score" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/alien_invasion/game_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/alien_invasion/game_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/alien_invasion/game_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/alien_invasion/game_stats.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1x1xgigKmtrvIkQ5185rli5gJZo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09f823da-0bed-4c13-a52f-c4a17b944178" name="默认的" comment="" />
+      <created>1629536508715</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629536508715</updated>
+    </task>
+    <servers />
+  </component>
+</project>
